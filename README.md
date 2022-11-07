@@ -20,17 +20,18 @@ File: [thyroid.mat](https://www.dropbox.com/s/bih0e15a0fukftb/thyroid.mat?dl=0)
 
 Description: X = Multi-dimensional point data, y = labels (1 = outliers, 0 = inliers)
 
-
 ## Techniques applied
 
 ### Multivariate Gaussian
 
-
 The Multivariate Gaussian appears frequently in Machine Learning and the following results are used in many ML books and courses without the derivations.
 
-> Given data in form of a matrix **X**X of dimensions **m**×**p**m×p, if we assume that the data follows a *pp-variate Gaussian* distribution with parameters mean **μ**μ ( **p**×**1**p×1) and covariance matrix **Σ**Σ (**p**×**p**p×p) the **Maximum Likelihood Estimators** are given by:
+> Given data in form of a matrix **X**X of dimensions **m**×**p**m×p, if we assume that the data follows a *p-variate Gaussian* distribution with parameters mean **μ** ( **p**×**1**) and covariance matrix **Σ** (**p**×**p**) the **Maximum Likelihood Estimators** are given by:
 >
-> * **μ**^**=**1**m**∑**m**i**= **1**x^(**i**)**=**x**¯**μ^=1m∑i=1mx(i)=x¯
-> * **Σ**^**=**1**m**∑**m**i**=**1**(**x**(**i**)**−**μ**^**)**(**x**(**i**)**−**μ**^**)**T**
+> * **μ =**1**m**∑**m**i**= **1**x^(**i**)**=**x**¯**μ^=1m∑i=1mx(i)=x¯
+> * **Σ** **=**1**m**∑**m**i**=**1**(**x**(**i**)**−**μ**^**)**(**x**(**i**)**−**μ**^**)**T**
 
-pass
+|          | All features | Features<br />selection | PCA  | LOF  | IsoForest | OneClassSVM |
+| -------- | ------------ | ----------------------- | ---- | ---- | --------- | ----------- |
+| F1-Score | 98.3         | **98.6**               | 98.4 | 93   | 91.2      | 49.5        |
+| Accuracy | 71.1         | **75.0**               | 68.4 | 10.2 | 36.5      | 9           |
