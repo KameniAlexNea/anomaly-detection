@@ -1,4 +1,5 @@
 # anomaly-detection
+
 Anomaly detection on thyroid dataset
 
 ## Dataset information
@@ -18,3 +19,18 @@ Saket Sathe and Charu C. Aggarwal. [LODES: Local Density meets Spectral Outlier 
 File: [thyroid.mat](https://www.dropbox.com/s/bih0e15a0fukftb/thyroid.mat?dl=0)
 
 Description: X = Multi-dimensional point data, y = labels (1 = outliers, 0 = inliers)
+
+
+## Techniques applied
+
+### Multivariate Gaussian
+
+
+The Multivariate Gaussian appears frequently in Machine Learning and the following results are used in many ML books and courses without the derivations.
+
+> Given data in form of a matrix **X**X of dimensions **m**×**p**m×p, if we assume that the data follows a *pp-variate Gaussian* distribution with parameters mean **μ**μ ( **p**×**1**p×1) and covariance matrix **Σ**Σ (**p**×**p**p×p) the **Maximum Likelihood Estimators** are given by:
+>
+> * **μ**^**=**1**m**∑**m**i**= **1**x^(**i**)**=**x**¯**μ^=1m∑i=1mx(i)=x¯
+> * **Σ**^**=**1**m**∑**m**i**=**1**(**x**(**i**)**−**μ**^**)**(**x**(**i**)**−**μ**^**)**T**
+
+pass
